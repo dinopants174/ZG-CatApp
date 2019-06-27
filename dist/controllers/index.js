@@ -55,7 +55,7 @@ exports.addcat = (req, res) => {
  */
 exports.postcat = (req, res) => {
     let cat = new Cat_1.default({ name: req.body.name, age: req.body.age, color: req.body.color });
-    cat.save((err, cats) => {
+    cat.save((err) => {
         if (err) {
             res.sendStatus(500);
             console.log("Error: ", err);

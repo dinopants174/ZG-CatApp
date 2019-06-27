@@ -63,7 +63,7 @@ export let addcat = (req: Request, res: Response) => {
  */
 export let postcat = (req: Request, res: Response) => {
   let cat = new Cat({name: req.body.name, age: req.body.age, color: req.body.color});
-  cat.save((err: Error, cats: Array<Object>) => {
+  cat.save((err: Error) => {
     if (err){
       res.sendStatus(500);
       console.log("Error: ", err);

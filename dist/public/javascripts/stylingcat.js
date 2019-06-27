@@ -3,6 +3,7 @@ $(document).ready(function () {
     let $surpriseButton = $("#surpriseButton");
     let $coloredSquare = $("#coloredSquare");
     $surpriseButton.click(function () {
+        alert('foo');
         if ($coloredSquare.css("background-color") == "rgb(255, 255, 255)") {
             $coloredSquare.css("background-color", "deepskyblue");
             $surpriseButton.text("ARE YOU NOT ENTERTAINED?!");
