@@ -31,6 +31,7 @@ mongoose.connection.on("error", () => {
  */
 app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "../views"));
+// @ts-ignore: Unreachable code error
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(logger('dev'));
