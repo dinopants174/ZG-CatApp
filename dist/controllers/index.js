@@ -54,7 +54,7 @@ exports.addcat = (req, res) => {
  * Post form data from Add Cat page.
  */
 exports.postcat = (req, res) => {
-    let cat = new Cat_1.default({ name: req.body.name, age: req.body.age, color: req.body.color });
+    let cat = new Cat_1.default({ name: String(req.body.name), age: Number(req.body.age), color: String(req.body.color) });
     cat.save((err) => {
         if (err) {
             res.sendStatus(500);
